@@ -1487,22 +1487,22 @@ table {
   }
 }
 
-.profilePic::before {
-  content: "";
+.profilePic img {
+  width: 200px;
+  height: 200px;
   position: absolute;
   top: 50%;
   left: 30.5%;
   min-width: 15vw;
   min-height: 15vw;
   border-radius: 45%;
-  background-image: url(/images/avata.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 @media (max-width: 768px) {
-  .profilePic::before {
+  .profilePic img {
     min-width: 30vw;
     min-height: 30vw;
     left: 39%;
@@ -1511,9 +1511,22 @@ table {
 }
 
 @media (max-width: 375px) {
-  .profilePic::before {
+  .profilePic img {
     left: 36%;
   }
+}
+
+.profilePic::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30.5%;
+  min-width: 15vw;
+  min-height: 15vw;
+  border-radius: 45%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .profilePic:after {
