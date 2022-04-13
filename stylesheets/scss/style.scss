@@ -1096,6 +1096,30 @@ $bar-spacing: 25px;
         padding: 30px;
     }
 }
+.profilePic {
+    img {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 30.5%;
+        min-width: 15vw;
+        min-height: 15vw;
+        border-radius: 45%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        @media (max-width: 768px) {
+            min-width: 30vw;
+            min-height: 30vw;
+            left: 39%;
+            top: 40%;
+        }
+        @media (max-width: 375px) {
+            left: 36%;
+        }
+    }
+}
 .profilePic::before {
     content: "";
     position: absolute;
@@ -1104,19 +1128,10 @@ $bar-spacing: 25px;
     min-width: 15vw;
     min-height: 15vw;
     border-radius: 45%;
-    background-image: url(/images/avata.jpg);
+    // background-image: url(/images/avata.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    @media (max-width: 768px) {
-        min-width: 30vw;
-        min-height: 30vw;
-        left: 39%;
-        top: 40%;
-    }
-    @media (max-width: 375px) {
-        left: 36%;
-    }
 }
 .profilePic:after {
     content: "";
